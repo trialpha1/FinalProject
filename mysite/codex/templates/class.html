@@ -1,0 +1,18 @@
+
+{% extends "base2.html" %}
+{% block classes %} 
+    <tr>
+    {% for Class in classes %}
+    <td style="text-align: center; padding-top: 25px;">
+        <img src="../../static/{{ Class.picture }}" style="border: none;" height="200" width="106"/><br />
+        <span style="font-size: 16pt; color:whitesmoke;" >{{ Class.Name }}</span>
+    </td>
+        {% if forloop.last %}
+            </tr>
+        {% else %}
+        {% if forloop.counter|divisibleby:"4" %}
+            <tr></tr>
+        {% endif %}
+        {% endif %}
+    {% endfor %} 
+{% endblock %}

@@ -1,0 +1,13 @@
+<style>
+    a:link {color: white}
+    a:visited {color: white}
+    a:hover {color: aqua;}
+    a {text-decoration: none}
+</style>
+{% extends "base.html" %}
+{% block class %}
+<tr></tr>
+{% for Name in Class %}
+<div class="Class"><a href="class/{{ Class.Name }}">{{ Class.Name }}</a></div>
+{% endfor %}
+{% endblock %}
